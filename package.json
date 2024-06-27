@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build_docs": "ng build --output-path ./docs --configuration production --base-href https://vitslepukhin,github.io/tele_test",
+    "build_docs": "ng build --output-path ./docs --base-href https://vitslepukhin.github.io/tele_test",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
