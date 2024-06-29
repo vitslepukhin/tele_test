@@ -9,6 +9,7 @@ import {
   TuiRootModule,
 } from '@taiga-ui/core';
 import { NgDompurifySanitizer } from '@tinkoff/ng-dompurify';
+import WebApp from '@twa-dev/sdk';
 
 @Component({
   selector: 'app-root',
@@ -34,5 +35,9 @@ export class AppComponent {
     this.alerts
       .open('Basic <strong>HTML</strong>', { label: 'With a heading!' })
       .subscribe();
+  }
+
+  clickTwaButton(): void {
+    WebApp.showAlert(`Hello World from TWA WebApp`);
   }
 }
