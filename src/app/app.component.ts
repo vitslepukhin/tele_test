@@ -29,6 +29,7 @@ import WebApp from '@twa-dev/sdk';
 })
 export class AppComponent implements OnInit {
   title = 'tele-test';
+  fullName = `${WebApp.initDataUnsafe.user?.first_name} ${WebApp.initDataUnsafe.user?.last_name}`;
   initData = WebApp.initDataUnsafe;
   constructor(
     @Inject(TuiAlertService) private readonly alerts: TuiAlertService
@@ -36,7 +37,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     WebApp.ready();
-    WebApp.enableClosingConfirmation();
   }
 
   showNotification(): void {
